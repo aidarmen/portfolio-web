@@ -1,95 +1,85 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
+const auroraConfigs = [
+  {
+    colors: ["#a1ffce", "#faffd1"],
+    top: "10%",
+    left: "10%",
+    width: "60vw",
+    height: "30vh",
+    blur: "80px",
+    animation: "aurora1 12s ease-in-out infinite alternate",
+    opacity: 0.6,
+  },
+  {
+    colors: ["#fbc2eb", "#a6c1ee"],
+    top: "30%",
+    left: "40%",
+    width: "50vw",
+    height: "25vh",
+    blur: "100px",
+    animation: "aurora2 14s ease-in-out infinite alternate",
+    opacity: 0.5,
+  },
+  {
+    colors: ["#89f7fe", "#66a6ff"],
+    top: "50%",
+    left: "20%",
+    width: "70vw",
+    height: "35vh",
+    blur: "120px",
+    animation: "aurora3 16s ease-in-out infinite alternate",
+    opacity: 0.4,
+  },
+];
 
 export const StarBackground = () => {
-  const [stars, setStars] = useState([]);
-  const [meteors, setMeteors] = useState([]);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    generateStars();
-    generateMeteors();
-
-    const handleResize = () => {
-      generateStars();
+    // Check if the 'dark' class is present on <html>
+    const checkDark = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
     };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+    checkDark();
+    // Listen for class changes (e.g., theme toggle)
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
   }, []);
 
-  const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
-    );
-
-    const newStars = [];
-
-    for (let i = 0; i < numberOfStars; i++) {
-      newStars.push({
-        id: i,
-        size: Math.random() * 3 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        opacity: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2,
-      });
-    }
-
-    setStars(newStars);
-  };
-
-  const generateMeteors = () => {
-    const numberOfMeteors = 4;
-    const newMeteors = [];
-
-    for (let i = 0; i < numberOfMeteors; i++) {
-      newMeteors.push({
-        id: i,
-        size: Math.random() * 2 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 20,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
-      });
-    }
-
-    setMeteors(newMeteors);
-  };
+  if (!isDark) return null;
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {stars.map((star) => (
+      {auroraConfigs.map((cfg, i) => (
         <div
-          key={star.id}
-          className="star animate-pulse-subtle"
+          key={i}
           style={{
-            width: star.size + "px",
-            height: star.size + "px",
-            left: star.x + "%",
-            top: star.y + "%",
-            opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
+            position: "absolute",
+            top: cfg.top,
+            left: cfg.left,
+            width: cfg.width,
+            height: cfg.height,
+            opacity: cfg.opacity,
+            background: `linear-gradient(120deg, ${cfg.colors[0]}, ${cfg.colors[1]})`,
+            filter: `blur(${cfg.blur})`,
+            borderRadius: "50%",
+            animation: cfg.animation,
+            zIndex: 0,
+            pointerEvents: "none",
+            mixBlendMode: "screen",
           }}
         />
       ))}
-
-      {meteors.map((meteor) => (
-        <div
-          key={meteor.id}
-          className="meteor animate-meteor"
-          style={{
-            width: meteor.size* 5  + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
-          }}
-        />
-      ))}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(ellipse at bottom, rgba(10,20,40,0.7) 60%, transparent 100%)",
+          zIndex: 1,
+        }}
+      />
     </div>
   );
 };

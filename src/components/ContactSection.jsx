@@ -12,6 +12,9 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
+const VITE_LINKIDIN_URL = import.meta.env.VITE_LINKIDIN_URL;
+const VITE_GOOGLESHEET_URL = import.meta.env.VITE_GOOGLESHEET_URL;
+
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,7 +30,7 @@ export const ContactSection = () => {
     };
 
     try {
-        await fetch("https://script.google.com/macros/s/AKfycbzAcVvbpeHCbYlXP1pGXZArbzMevEcdmBf6BfOgzOQ8MmbwHEfJegb6vWoSXeXXEoZe/exec", {
+        await fetch({VITE_GOOGLESHEET_URL}, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
@@ -112,7 +115,7 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/aidar-batyrbekov-b100b4106" target="_blank">
+                <a href={VITE_LINKIDIN_URL} target="_blank" rel="noopener noreferrer">
                   <Linkedin />
                 </a>
                 {/* <a href="#" target="_blank">

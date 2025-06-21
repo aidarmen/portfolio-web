@@ -1,12 +1,66 @@
-# React + Vite
+# 🌌 My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio built with **React**, **Vite**, **Tailwind CSS**, and includes effects like a custom **Aurora Borealis background** and a **dark/light mode toggle**.
 
-Currently, two official plugins are available:
+![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot2.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Responsive and animated UI
+- Aurora Borealis background (dark mode)
+- Starry sky with meteor animation
+- Light/Dark theme toggle
+- Contact form with toast notifications
+- Environment variable support (Vite)
+- Docker-ready setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide
+- **Deployment:** Docker
+- **Other tools:** Git, GitHub, VS Code
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/aidarmen/portfolio-web
+cd portfolio-web
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run locally
+
+```bash
+npm run dev
+```
+
+### 4. Environment Variables
+
+Create a `.env` file:
+
+```env
+VITE_API_URL=https://your-api.com
+VITE_LINKEDIN_URL=https://linkedin.com/in/your-profile
+```
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+## 🐳 Docker Support
+
+```bash
+docker-compose up --build
+```

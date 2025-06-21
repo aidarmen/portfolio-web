@@ -3,4 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "3000:80"
+      - "3000:80" 
+    environment:
+      - VITE_LINKIDIN_URL=https://www.linkedin.com/in/aidar-batyrbekov-b100b4106
+      - VITE_GOOGLESHEET_URL=https://script.google.com/macros/s/AKfycbzAcVvbpeHCbYlXP1pGXZArbzMevEcdmBf6BfOgzOQ8MmbwHEfJegb6vWoSXeXXEoZe/exec
