@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "3000:80" 
+      - "127.0.0.1:3000:80" 
     environment:
       - VITE_LINKIDIN_URL=${VITE_LINKIDIN_URL}
       - VITE_GOOGLESHEET_URL=${VITE_GOOGLESHEET_URL}
