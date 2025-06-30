@@ -7,7 +7,7 @@ const projects = [
     description: "LangChain Chatbot connected with OpenAI and Agent tools.",
     image: "/projects/LangChain Chatbot.png",
     tags: ["Python","Streamlit", "OpenAI", "Agent tools","Docker"],
-    demoUrl: "#",
+    demoUrl: "https://chatbot.datasetcore.com.",
     githubUrl: "https://github.com/aidarmen/chatbot_with_tools",
   },
   {
