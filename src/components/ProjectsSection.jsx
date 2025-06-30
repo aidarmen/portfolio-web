@@ -6,9 +6,9 @@ const projects = [
     title: "LangChain Chatbot",
     description: "LangChain Chatbot connected with OpenAI and Agent tools.",
     image: "/projects/LangChain Chatbot.png",
-    tags: ["Streamlit", "OpenAI", "Agent tools"],
+    tags: ["Python","Streamlit", "OpenAI", "Agent tools","Docker"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/aidarmen/chatbot_with_tools",
   },
   {
     id: 2,
@@ -16,9 +16,19 @@ const projects = [
     description:
       "Interactive dashboard for web scraping data.",
     image: "/projects/Web Scraper.png",
-    tags: ["Streamlit", "OpenAI", "Web Scraper"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["Python","Streamlit", "OpenAI", "Web Scraper","Docker","SupaBase"],
+    demoUrl: "https://webscraper.datasetcore.com",
+    githubUrl: "https://github.com/aidarmen/scrap-master",
+  },
+  {
+    id: 3,
+    title: "Sudoku",
+    description:
+      "Sudoku game built with React, Vite, and Docker. Fully responsive and deployable.",
+    image: "/projects/Sudoku.png",
+    tags: ["TypeScript","React",  "Docker"],
+    demoUrl: "https://sudoku.datasetcore.com",
+    githubUrl: "https://github.com/aidarmen/sudoku",
   }
 ];
 
