@@ -1,11 +1,13 @@
-
 services:
   web:
-    build: .
-    ports:
-      - "127.0.0.1:3000:80" 
+    build:
+      context: .
+      args:
+        VITE_LINKIDIN_URL: ${VITE_LINKIDIN_URL}
+        VITE_GOOGLESHEET_URL: ${VITE_GOOGLESHEET_URL}
     environment:
-      - VITE_LINKIDIN_URL=${VITE_LINKIDIN_URL}
-      - VITE_GOOGLESHEET_URL=${VITE_GOOGLESHEET_URL}
+      - NODE_ENV=production
+    ports:
+      - "127.0.0.1:3000:80"
     mem_limit: 400m
     restart: always
