@@ -29,6 +29,16 @@ const projects = [
     tags: ["TypeScript","React",  "Docker"],
     demoUrl: "https://sudoku.datasetcore.com",
     githubUrl: "https://github.com/aidarmen/sudoku",
+  },
+    {
+    id: 4,
+    title: "Power Bi Sample Dashboard",
+    description:
+      "Power Bi Sample Dashboard showcasing data visualization capabilities.",
+    image: "/projects/Power Bi Sample Dashboard.png",
+    tags: ["Power Bi"],
+    demoUrl: "https://dashboard1.datasetcore.com",
+    githubUrl: "https://github.com/aidarmen/Power-BI-Collections",
   }
 ];
 
