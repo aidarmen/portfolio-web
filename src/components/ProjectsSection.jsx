@@ -37,7 +37,7 @@ const projects = [
       "Power Bi Sample Dashboard showcasing data visualization capabilities.",
     image: "/projects/Power Bi Sample Dashboard.png",
     tags: ["Power Bi"],
-    demoUrl: "https://dashboard1.datasetcore.com",
+    demoUrl: "https://datasetcore.com/dashboard1.html",
     githubUrl: "https://github.com/aidarmen/Power-BI-Collections",
   }
 ];

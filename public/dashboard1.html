@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Analysis Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .responsive-iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 75%; /* 4:3 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .responsive-iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="responsive-iframe-container">
+    <iframe title="Sales_Analysis"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzMyMWZiMzgtZWE2ZS00OTQ1LTk3NTctMzBiNTE0MTk3MjQ5IiwidCI6IjczYjViMGFhLTc5NjUtNDg5ZS05MDM4LTgxNGQ1ZTJkZjkxMSIsImMiOjl9"
+            allowFullScreen="true">
+    </iframe>
+  </div>
+</body>
+</html>
