@@ -36,8 +36,18 @@ const projects = [
     description:
       "Power Bi Sample Dashboard showcasing data visualization capabilities.",
     image: "/projects/Power Bi Sample Dashboard.png",
-    tags: ["Power Bi"],
+    tags: ["Power Bi","Data Visualization", "Dashboard","Data Analysis"],
     demoUrl: "https://datasetcore.com/dashboard1.html",
+    githubUrl: "https://github.com/aidarmen/Power-BI-Collections",
+  },
+  {
+    id: 5,
+    title: "Power Bi Sample Dashboard",
+    description:
+      "Power Bi Sample Dashboard showcasing data visualization capabilities.",
+    image: "/projects/bank_loan_data_insights.png",
+    tags: ["Power Bi","Data Visualization", "Dashboard","Data Analysis"],
+    demoUrl: "https://datasetcore.com/dashboard2.html",
     githubUrl: "https://github.com/aidarmen/Power-BI-Collections",
   }
 ];
