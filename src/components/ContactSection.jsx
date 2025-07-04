@@ -30,7 +30,7 @@ export const ContactSection = () => {
     };
 
     try {
-        await fetch({VITE_GOOGLESHEET_URL}, {
+        await fetch(VITE_GOOGLESHEET_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
