@@ -53,7 +53,7 @@ VITE_API_URL=https://your-api.com
 VITE_LINKEDIN_URL=https://linkedin.com/in/your-profile
 ```
 
-### 5. Build for production
+### 5. Build for  production
 
 ```bash
 npm run build
