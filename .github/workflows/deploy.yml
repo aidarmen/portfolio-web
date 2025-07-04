@@ -18,10 +18,9 @@ jobs:
       - name: SSH into server and deploy
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-            cd ${{ secrets.SERVER_APP_PATH }} &&
+            cd ${{ secrets.TARGET_PATH }} &&
             git pull &&
             docker-compose pull &&
             docker-compose down &&
             docker-compose up -d
           "
-  
