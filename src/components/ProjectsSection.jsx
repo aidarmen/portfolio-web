@@ -49,6 +49,36 @@ const projects = [
     tags: ["Power Bi","Data Visualization", "Dashboard","Data Analysis"],
     demoUrl: "https://datasetcore.com/dashboard2.html",
     githubUrl: "https://github.com/aidarmen/Power-BI-Collections",
+  },
+  {
+    id: 6,
+    title: "Intro to PyTorch Series",
+    description:
+      "A curated series of Kaggle notebooks introducing PyTorch fundamentals through practical examples.",
+    image: "/projects/Intro to PyTorch.png",
+    tags: ["Python", "PyTorch", "Deep Learning", "Kaggle"],
+    demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-introduction-to-pytorch",
+    githubUrl: "", // You can add a GitHub repo later if relevant
+  },
+  {
+    id: 7,
+    title: "Machine Learning Start Series",
+    description:
+      "Step-by-step notebooks guiding beginners through core ML algorithms and workflows.",
+    image: "/projects/Machine Learning Start.png",
+    tags: ["Python", "Machine Learning", "Scikit-learn", "Kaggle"],
+    demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-machine-learning-start",
+    githubUrl: "",
+  },
+  {
+    id: 8,
+    title: "Deep Learning with Keras Series",
+    description:
+      "Comprehensive guide to deep learning using Keras, complete with examples and challenges.",
+    image: "/projects/Deep Learning with Keras.png",
+    tags: ["Python", "Deep Learning", "Keras", "Neural Networks", "Kaggle"],
+    demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-deep-learning-with-keras",
+    githubUrl: "",
   }
 ];
 
