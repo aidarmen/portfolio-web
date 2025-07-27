@@ -52,31 +52,28 @@ export const StarBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {auroraConfigs.map((cfg, i) => (
+      {/* {auroraConfigs.map((cfg, i) => ( */}
         <div
-          key={i}
+          //key={i}
+          className="absolute inset-0 z-0"
           style={{
-            position: "absolute",
-            top: cfg.top,
-            left: cfg.left,
-            width: cfg.width,
-            height: cfg.height,
-            opacity: cfg.opacity,
-            background: `linear-gradient(120deg, ${cfg.colors[0]}, ${cfg.colors[1]})`,
-            filter: `blur(${cfg.blur})`,
-            borderRadius: "50%",
-            animation: cfg.animation,
-            zIndex: 0,
-            pointerEvents: "none",
-            mixBlendMode: "screen",
+            background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
           }}
         />
-      ))}
+      {/* ))} */}
       <div
+      className="absolute inset-0 z-0"
         style={{
           position: "absolute",
           inset: 0,
           background: "radial-gradient(ellipse at bottom, rgba(10,20,40,0.7) 60%, transparent 100%)",
+          backgroundImage: `
+            radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.2) 1px, transparent 0),
+            radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.18) 1px, transparent 0),
+            radial-gradient(circle at 1px 1px, rgba(236, 72, 153, 0.15) 1px, transparent 0)
+          `,
+          backgroundSize: "20px 20px, 30px 30px, 25px 25px",
+          backgroundPosition: "0 0, 10px 10px, 15px 5px",
           zIndex: 1,
         }}
       />
