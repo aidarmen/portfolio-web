@@ -58,7 +58,7 @@ const projects = [
     image: "/projects/Intro to PyTorch.png",
     tags: ["Python", "PyTorch", "Deep Learning", "Kaggle"],
     demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-introduction-to-pytorch",
-    githubUrl: "", // You can add a GitHub repo later if relevant
+    githubUrl: "", 
   },
   {
     id: 7,
@@ -79,7 +79,17 @@ const projects = [
     tags: ["Python", "Deep Learning", "Keras", "Neural Networks", "Kaggle"],
     demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-deep-learning-with-keras",
     githubUrl: "",
-  }
+  },
+  {
+  id: 9,
+  title: "Statistical Tests Series",
+  description:
+    "Hands-on guide to essential statistical tests used in data science, including parametric, non-parametric, and regression-related tests.",
+  image: "/projects/Statistical Tests Series.png",
+  tags: ["Python", "Statistics", "Hypothesis Testing", "Kaggle"],
+  demoUrl: "https://www.kaggle.com/code/aidarmen/kaggle-notebook-series-statistical-tests",
+  githubUrl: "",
+}
 ];
 
 export const ProjectsSection = () => {
